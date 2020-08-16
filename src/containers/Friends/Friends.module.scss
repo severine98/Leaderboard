@@ -1,0 +1,11 @@
+@import '../../assets/variables.module.scss';
+
+.friends {
+  position: absolute;
+  top: 30px;
+  width: 80%;
+  height: fit-content;
+  border: 1px solid $light-grey;
+  border-radius: $border-radius;
+  border-bottom: 5px solid $light-grey;
+}
