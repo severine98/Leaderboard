@@ -1,8 +1,10 @@
+@import url(//db.onlinewebfonts.com/c/247f78c66460ef911348e889c9f500a5?family=Haboro+Soft+Norm+Regular);
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:"Haboro Soft Norm Regular";
   font-weight: bold;
 }
 
