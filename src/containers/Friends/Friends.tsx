@@ -15,6 +15,17 @@ class Friends extends React.Component<IState> {
     userInformation: user
   }
 
+  componentDidMount = (): void => {
+    this.sortByXp();
+  }
+
+  sortByXp = (): void => {
+    const sortedXP = this.state.userInformation?.profiles.sort((a, b) => {
+      return b.weeklyXP - a.weeklyXP;
+    });
+    this.setState({ userInformation: { profiles: sortedXP } });
+  }
+
   getProfile = (user: Profile, key: number) => {
     return (
       <Leaderboard userInformation={user} key={key} index={key + 1} />
@@ -22,10 +33,11 @@ class Friends extends React.Component<IState> {
   };
 
   render() {
+    console.log(this.state.userInformation);
     return (
       <section className={styles.friends}>
         <Banner />
-        <div>{this.state.userInformation?.profiles.map(this.getProfile)}</div>
+        <div>{this.state.userInformation?.profiles?.map(this.getProfile)}</div>
         <More />
       </section>
     );
