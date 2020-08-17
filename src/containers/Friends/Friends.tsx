@@ -33,7 +33,6 @@ class Friends extends React.Component<IState> {
   };
 
   render() {
-    console.log(this.state.userInformation);
     return (
       <section className={styles.friends}>
         <Banner />
